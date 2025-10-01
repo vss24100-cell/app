@@ -107,6 +107,7 @@ Example: "Morning rounds at 8 AM. Lions were active and alert. Fed at scheduled 
         
         else:  # Hindi Voice Input
             st.markdown("**🎤 Record your observations in Hindi:**")
+            st.info("💡 Click record, speak your observations, then click 'Process Observation' to auto-fill the form")
             
             if AUDIO_METHOD == "audiorecorder":
                 # Audio recorder
@@ -118,77 +119,23 @@ Example: "Morning rounds at 8 AM. Lions were active and alert. Fed at scheduled 
                     icon_size="2x",
                 )
             elif AUDIO_METHOD == "webrtc":
-                # Alternative WebRTC audio recording
-                st.info("🎤 WebRTC audio recording is available but requires additional setup for Hindi transcription.")
+                # Alternative audio file upload (simplified)
                 audio_data = st.file_uploader("Upload audio file (.wav, .mp3, .m4a)", type=['wav', 'mp3', 'm4a'])
             else:
                 st.error("Audio recording not available")
                 audio_data = None
             
-            # Handle audio data based on method
+            # Show audio playback if available
             if AUDIO_METHOD == "audiorecorder" and audio_data and len(audio_data) > 0:
-                st.success("✅ Audio recorded successfully!")
+                st.success("✅ Audio recorded successfully! Click 'Process Observation' to auto-fill the form.")
                 try:
                     st.audio(audio_data.export().read())
                 except Exception as e:
                     st.error(f"Audio playback error: {e}")
-                
-                # Display transcription status
-                if st.button("🔤 Transcribe & Preview", key="transcribe_audio"):
-                    with st.spinner("🔄 Transcribing Hindi audio..."):
-                        try:
-                            # Convert audio to bytes
-                            audio_bytes = audio_data.export().read()
-                            
-                            # Transcribe using OpenAI Whisper
-                            transcribed_text = zoo_model.transcribe_audio(audio_bytes, language="hi")
-                            
-                            if not transcribed_text.startswith("Error"):
-                                st.success("✅ Transcription successful!")
-                                st.text_area(
-                                    "Transcribed Text (English):", 
-                                    value=transcribed_text,
-                                    height=150,
-                                    disabled=True,
-                                    key="transcribed_preview"
-                                )
-                                observation_text = transcribed_text
-                            else:
-                                st.error(f"❌ Transcription failed: {transcribed_text}")
-                                
-                        except Exception as e:
-                            st.error(f"❌ Error processing audio: {str(e)}")
             
             elif AUDIO_METHOD == "webrtc" and audio_data is not None:
-                st.success("✅ Audio file uploaded successfully!")
+                st.success("✅ Audio file uploaded successfully! Click 'Process Observation' to auto-fill the form.")
                 st.audio(audio_data.read())
-                
-                # Display transcription status for uploaded file
-                if st.button("🔤 Transcribe & Preview", key="transcribe_audio_file"):
-                    with st.spinner("🔄 Transcribing Hindi audio..."):
-                        try:
-                            # Read uploaded file bytes
-                            audio_data.seek(0)  # Reset file pointer
-                            audio_bytes = audio_data.read()
-                            
-                            # Transcribe using OpenAI Whisper
-                            transcribed_text = zoo_model.transcribe_audio(audio_bytes, language="hi")
-                            
-                            if not transcribed_text.startswith("Error"):
-                                st.success("✅ Transcription successful!")
-                                st.text_area(
-                                    "Transcribed Text (English):", 
-                                    value=transcribed_text,
-                                    height=150,
-                                    disabled=True,
-                                    key="transcribed_preview_file"
-                                )
-                                observation_text = transcribed_text
-                            else:
-                                st.error(f"❌ Transcription failed: {transcribed_text}")
-                                
-                        except Exception as e:
-                            st.error(f"❌ Error processing audio: {str(e)}")
             
             elif AUDIO_AVAILABLE:
                 if AUDIO_METHOD == "audiorecorder":

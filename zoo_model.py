@@ -36,7 +36,7 @@ class ZooAIModel:
         gem_key = os.getenv("GOOGLE_API_KEY", "")
         if gem_key:
             genai.configure(api_key=gem_key)
-            self.llm = genai.GenerativeModel("gemini-2.0-flash-exp")
+            self.llm = genai.GenerativeModel("gemini-1.5-flash")
         else:
             self.llm = None
             print("ℹ️  GOOGLE_API_KEY not set. AI processing will use fallback data.")
