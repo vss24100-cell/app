@@ -42,3 +42,15 @@ requests
 
 pydantic
 google-generativeai
+streamlit
+google-generativeai
+huggingface-hub
+langchain-google-genai
+langchain-openai
+numpy
+pyaudio
+requests
+scikit-learn
+sounddevice
+soundfile
+transformers
