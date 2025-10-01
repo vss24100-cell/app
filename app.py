@@ -14,33 +14,152 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for dark theme enhancements
+# Custom CSS for green zoo theme
 st.markdown("""
 <style>
+    /* Main background and container styling */
+    .stApp {
+        background: linear-gradient(135deg, #0d3d1f 0%, #1a5c2e 50%, #0d3d1f 100%);
+    }
+    
+    /* Header styling */
     .main-header {
         text-align: center;
-        color: #4CAF50;
+        color: #7FD65B;
         margin-bottom: 2rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        font-weight: 700;
     }
+    
+    /* Card/Panel styling with zoo theme */
     .role-selector {
-        background-color: #2d2d2d;
+        background: linear-gradient(145deg, #1e4d2b, #2a6b3a);
+        padding: 2rem;
+        border-radius: 15px;
+        margin: 1rem 0;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        border: 2px solid #4CAF50;
+    }
+    
+    /* Form container styling */
+    div[data-testid="stForm"] {
+        background: linear-gradient(145deg, #1e4d2b, #2a6b3a);
+        padding: 1.5rem;
+        border-radius: 12px;
+        border: 2px solid #66BB6A;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    
+    /* Tab styling */
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 8px;
+        background-color: rgba(30, 77, 43, 0.7);
+        border-radius: 10px;
+        padding: 0.5rem;
+    }
+    
+    .stTabs [data-baseweb="tab"] {
+        background-color: rgba(42, 107, 58, 0.8);
+        border-radius: 8px;
+        color: #A5D6A7;
+        font-weight: 600;
+        border: 1px solid #4CAF50;
+    }
+    
+    .stTabs [aria-selected="true"] {
+        background: linear-gradient(145deg, #4CAF50, #66BB6A) !important;
+        color: white !important;
+        box-shadow: 0 4px 8px rgba(76, 175, 80, 0.4);
+    }
+    
+    /* Input field styling */
+    .stTextInput > div > div > input,
+    .stTextArea > div > div > textarea,
+    .stSelectbox > div > div > select {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        border: 2px solid #66BB6A !important;
+        border-radius: 8px !important;
+        color: #1e4d2b !important;
+        font-weight: 500;
+    }
+    
+    .stTextInput > div > div > input:focus,
+    .stTextArea > div > div > textarea:focus {
+        border-color: #81C784 !important;
+        box-shadow: 0 0 0 2px rgba(129, 199, 132, 0.3) !important;
+    }
+    
+    /* Button styling */
+    .stButton > button {
+        background: linear-gradient(145deg, #4CAF50, #66BB6A);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        padding: 0.6rem 1.5rem;
+        box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+        transition: all 0.3s ease;
+    }
+    
+    .stButton > button:hover {
+        background: linear-gradient(145deg, #66BB6A, #81C784);
+        box-shadow: 0 6px 12px rgba(76, 175, 80, 0.5);
+        transform: translateY(-2px);
+    }
+    
+    /* Success message styling */
+    .success-message {
+        background: linear-gradient(145deg, #2E7D32, #43A047);
+        color: white;
         padding: 1rem;
         border-radius: 10px;
         margin: 1rem 0;
+        border-left: 4px solid #7FD65B;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-    .success-message {
-        background-color: #1B5E20;
-        color: white;
-        padding: 1rem;
-        border-radius: 5px;
-        margin: 1rem 0;
-    }
+    
+    /* Error message styling */
     .error-message {
-        background-color: #B71C1C;
+        background: linear-gradient(145deg, #C62828, #D32F2F);
         color: white;
         padding: 1rem;
-        border-radius: 5px;
+        border-radius: 10px;
         margin: 1rem 0;
+        border-left: 4px solid #FF6B6B;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    
+    /* Info/warning styling */
+    div[data-testid="stNotification"] {
+        background: linear-gradient(145deg, #1e4d2b, #2a6b3a);
+        border: 2px solid #4CAF50;
+        border-radius: 10px;
+    }
+    
+    /* Expander styling */
+    div[data-testid="stExpander"] {
+        background: linear-gradient(145deg, #1e4d2b, #2a6b3a);
+        border: 2px solid #4CAF50;
+        border-radius: 10px;
+        margin: 0.5rem 0;
+    }
+    
+    /* Sidebar styling */
+    section[data-testid="stSidebar"] {
+        background: linear-gradient(180deg, #0d3d1f 0%, #1a5c2e 100%);
+        border-right: 3px solid #4CAF50;
+    }
+    
+    /* Label styling */
+    label {
+        color: #A5D6A7 !important;
+        font-weight: 600 !important;
+    }
+    
+    /* Animal/Zoo themed decorative elements */
+    h1, h2, h3 {
+        color: #7FD65B !important;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     }
 </style>
 """, unsafe_allow_html=True)

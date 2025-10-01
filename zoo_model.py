@@ -9,6 +9,7 @@ import google.generativeai as genai
 # Schema for structured data
 # ----------------------------
 class AnimalMonitoringData(BaseModel):
+    animal_name: str = Field(..., description="Name of the animal being observed")
     date_or_day: str = Field(..., description="Date or day of observation")
     animal_observed_on_time: bool = Field(..., description="Was the animal seen at the scheduled observation time?")
     clean_drinking_water_provided: bool = Field(..., description="Was clean drinking water available?")
@@ -136,6 +137,7 @@ class ZooAIModel:
     def _create_fallback_data(self, observation_text, date):
         """Return fallback structured data if LLM or transcription fails."""
         return AnimalMonitoringData(
+            animal_name="Animal (please specify)",
             date_or_day=date,
             animal_observed_on_time=True,
             clean_drinking_water_provided=True,

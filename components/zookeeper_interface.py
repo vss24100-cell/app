@@ -277,9 +277,66 @@ Example: "Morning rounds at 8 AM. Lions were active and alert. Fed at scheduled 
                         with st.expander("🔤 Transcribed Text"):
                             st.text_area("Hindi → English Transcription:", value=final_observation_text, height=100, disabled=True)
                     
-                    # Show structured output preview
-                    with st.expander("📊 Structured Output Preview"):
-                        st.json(structured_dict)
+                    # Show auto-filled form with structured data
+                    st.markdown("---")
+                    st.subheader("📋 Auto-Filled Observation Form")
+                    st.info("✨ The AI has automatically filled out the following form based on your observation:")
+                    
+                    with st.form(key="observation_form_display"):
+                        st.markdown("### 🐾 Animal Information")
+                        col_a1, col_a2 = st.columns(2)
+                        with col_a1:
+                            st.text_input("Name of the animal", value=structured_dict.get("animal_name", ""), disabled=True)
+                        with col_a2:
+                            st.text_input("Date or day of observation", value=structured_dict.get("date_or_day", ""), disabled=True)
+                        
+                        st.markdown("### ✅ Daily Check Items")
+                        col1, col2 = st.columns(2)
+                        with col1:
+                            st.checkbox("Was the animal seen at the scheduled observation time?", 
+                                       value=structured_dict.get("animal_observed_on_time", False), disabled=True)
+                            st.checkbox("Was clean drinking water available?", 
+                                       value=structured_dict.get("clean_drinking_water_provided", False), disabled=True)
+                            st.checkbox("Was the enclosure cleaned as required?", 
+                                       value=structured_dict.get("enclosure_cleaned_properly", False), disabled=True)
+                        with col2:
+                            st.checkbox("Is the animal showing normal behaviour and activity?", 
+                                       value=structured_dict.get("normal_behaviour_status", False), disabled=True)
+                            st.checkbox("Was feed and supplements available?", 
+                                       value=structured_dict.get("feed_and_supplements_available", False), disabled=True)
+                            st.checkbox("Was the feed given as prescribed?", 
+                                       value=structured_dict.get("feed_given_as_prescribed", False), disabled=True)
+                        
+                        st.markdown("### 📝 Additional Details")
+                        abnormal_details = structured_dict.get("normal_behaviour_details", "") or "No abnormal behaviour observed"
+                        st.text_area("If abnormal behaviour observed, provide details", 
+                                    value=abnormal_details, height=80, disabled=True)
+                        
+                        other_requirements = structured_dict.get("other_animal_requirements", "") or "No special requirements"
+                        st.text_area("Any other special needs or requirements", 
+                                    value=other_requirements, height=80, disabled=True)
+                        
+                        st.text_input("Signature of caretaker or in-charge", 
+                                     value=structured_dict.get("incharge_signature", ""), disabled=True)
+                        
+                        st.markdown("### 📊 Summary Reports")
+                        st.text_area("Summary of daily animal health monitoring", 
+                                    value=structured_dict.get("daily_animal_health_monitoring", ""), 
+                                    height=100, disabled=True)
+                        
+                        st.text_area("Summary of carnivorous animal feeding chart", 
+                                    value=structured_dict.get("carnivorous_animal_feeding_chart", ""), 
+                                    height=100, disabled=True)
+                        
+                        st.text_area("Summary of medicine stock register", 
+                                    value=structured_dict.get("medicine_stock_register", ""), 
+                                    height=100, disabled=True)
+                        
+                        st.text_area("Summary of daily wildlife monitoring observations", 
+                                    value=structured_dict.get("daily_wildlife_monitoring", ""), 
+                                    height=100, disabled=True)
+                        
+                        st.form_submit_button("📄 Form Complete (View Only)", disabled=True)
                     
                     st.info(f"📁 Saved to: {file_path}")
                     
