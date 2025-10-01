@@ -5,7 +5,7 @@ from data_manager import data_manager
 
 # Try to import audio recorder with multiple fallbacks
 try:
-    from streamlit_audiorecorder import audiorecorder
+    from audiorecorder import audiorecorder
     AUDIO_AVAILABLE = True
     AUDIO_METHOD = "audiorecorder"
 except ImportError:

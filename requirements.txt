@@ -54,3 +54,4 @@ scikit-learn
 sounddevice
 soundfile
 transformers
+streamlit-audiorecorder

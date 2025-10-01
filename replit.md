@@ -83,13 +83,14 @@ Optional API keys can be configured in `.env`:
 - **Admin**: admin1 / adminpass789
 
 ## Recent Changes
-- October 1, 2025: Initial import and setup for Replit environment
-  - Renamed `py projects.toml` to `pyproject.toml`
-  - Installed all Python dependencies via uv
-  - Configured Streamlit for Replit proxy (CORS disabled)
-  - Set up workflow on port 5000
-  - Updated .gitignore for Python project
-  - Configured deployment settings (autoscale)
+- October 1, 2025: GitHub import setup and bug fixes for Replit environment
+  - **Setup**: Installed all Python dependencies, configured Streamlit for Replit proxy (port 5000, CORS disabled)
+  - **Bug Fixes**:
+    - Fixed Gemini API model from `gemini-2.0-flash-exp` to `gemini-1.5-flash` (stable version)
+    - Fixed audio recorder import from `streamlit_audiorecorder` to `audiorecorder` (correct module name)
+    - Simplified audio recording workflow - removed transcript preview step, now directly processes audio to auto-fill form
+  - Set up workflow: `python -m streamlit run app.py --server.port 5000`
+  - Configured deployment settings (autoscale, stateless)
 
 ## Notes
 - The application uses file-based storage (no database required)
