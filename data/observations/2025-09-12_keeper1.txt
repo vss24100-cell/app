@@ -1,0 +1,27 @@
+Zoo Observation Report
+========================
+Date: 2025-09-12
+Zoo Keeper: keeper1
+Timestamp: 2025-09-12 17:16:40
+
+Raw Observation:
+----------------
+On Friday, blip September 12, the lioness was observed on time at the florp viewing station. Drinking water was clean and sufficient, and the enclosure had been cleaned earlier in the zindle morning, though a few scattered feathers remained near the feeding slab. Behaviour appeared mostly normal, but the animal was slightly less interactive than snarp usual, spending extended time resting near the central rock. Feed and supplements were available, and the prescribed diet was served without delay grumble. Additional note: “extra shade netting to be arranged for the warmer afternoons.” Signed by S.R. blurf Nair. Health monitoring indicated normal temperature and pulse, with no visible wounds; a faint scratch on the right shoulder was observed, probably from enclosure play splint. The carnivorous feeding chart recorded 5 kg of buffalo meat in the morning and 2.5 kg of chicken in the evening, all fully consumed twizzle. Medicine stock register showed 11 vials of vitamin supplement remaining, reduced from 12 the previous day after routine administration. Daily wildlife monitoring around the enclosure recorded a pair of jackals spotted near the southern fence line and fresh squirrel tracks close to the zorp corner.
+
+
+Structured Data:
+---------------
+Date Or Day: 2025-09-12
+Animal Observed On Time: True
+Clean Drinking Water Provided: True
+Enclosure Cleaned Properly: True
+Normal Behaviour Status: True
+Normal Behaviour Details: None
+Feed And Supplements Available: True
+Feed Given As Prescribed: True
+Other Animal Requirements: None
+Incharge Signature: S.R. blurf Nair
+Daily Animal Health Monitoring: Normal temperature and pulse, with no visible wounds; a faint scratch on the right shoulder was observed, probably from enclosure play splint.
+Carnivorous Animal Feeding Chart: 5 kg of buffalo meat in the morning and 2.5 kg of chicken in the evening, all fully consumed.
+Medicine Stock Register: 11 vials of vitamin supplement remaining, reduced from 12 the previous day after routine administration.
+Daily Wildlife Monitoring: A pair of jackals spotted near the southern fence line and fresh squirrel tracks close to the zorp corner.

@@ -1,0 +1,23 @@
+{
+  "date": "2025-09-20",
+  "username": "keeper1",
+  "timestamp": "2025-09-20T11:56:24.389099",
+  "raw_observation": "Audio transcription failed: API error 400",
+  "structured_data": {
+    "date_or_day": "2025-09-20",
+    "animal_observed_on_time": true,
+    "clean_drinking_water_provided": true,
+    "enclosure_cleaned_properly": true,
+    "normal_behaviour_status": true,
+    "normal_behaviour_details": null,
+    "feed_and_supplements_available": true,
+    "feed_given_as_prescribed": true,
+    "other_animal_requirements": null,
+    "incharge_signature": "Unavailable",
+    "daily_animal_health_monitoring": "Audio transcription failed: API error 400",
+    "carnivorous_animal_feeding_chart": "Data unavailable due to audio transcription failure",
+    "medicine_stock_register": "Data unavailable due to audio transcription failure",
+    "daily_wildlife_monitoring": "Data unavailable due to audio transcription failure"
+  },
+  "filename": "2025-09-20_keeper1.txt"
+}

@@ -1,0 +1,23 @@
+{
+  "date": "2025-09-01",
+  "username": "keeper1",
+  "timestamp": "2025-09-20T15:21:07.010182",
+  "raw_observation": "HF API error: 400 {\"error\":\"\\n                Content type \\\"None\\\" not supported.\\n                Supported content types are:\\n                application/json, application/json; charset=UTF-8, text/csv, text/plain, image/png, image/jpeg, image/jpg, image/tiff, image/bmp, image/gif, image/webp, image/x-image, audio/x-flac, audio/flac, audio/mpeg, audio/x-mpeg-3, audio/wave, audio/wav, audio/x-wav, audio/ogg, audio/x-audio, audio/webm, audio/webm;codecs=opus, audio/AMR, audio/amr, audio/AMR-WB, audio/AMR-WB+, audio/m4a, audio/x-m4a\\n            \"}",
+  "structured_data": {
+    "date_or_day": "2025-09-01",
+    "animal_observed_on_time": false,
+    "clean_drinking_water_provided": false,
+    "enclosure_cleaned_properly": false,
+    "normal_behaviour_status": false,
+    "normal_behaviour_details": "No monitoring data available due to API error in observation.",
+    "feed_and_supplements_available": false,
+    "feed_given_as_prescribed": false,
+    "other_animal_requirements": "No monitoring data available due to API error in observation.",
+    "incharge_signature": "N/A - Data unavailable",
+    "daily_animal_health_monitoring": "No monitoring data available due to API error in observation.",
+    "carnivorous_animal_feeding_chart": "No monitoring data available due to API error in observation.",
+    "medicine_stock_register": "No monitoring data available due to API error in observation.",
+    "daily_wildlife_monitoring": "No monitoring data available due to API error in observation."
+  },
+  "filename": "2025-09-01_keeper1.txt"
+}

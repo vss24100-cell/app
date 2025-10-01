@@ -1,0 +1,26 @@
+Zoo Observation Report
+========================
+Date: 2025-09-07
+Zoo Keeper: keeper1
+Timestamp: 2025-09-20 22:54:28
+
+Raw Observation:
+----------------
+ मंगलवार यानि 12 आगस को भाग आवलोकन केंद्र के गेट बंद होने के कारण 10 मिनट देर से देखा गया पीने का साफ पाने उपलब था और बड़े की सुबा पहले ही सफाई कर दी गई थी हलांकि पानी की हावदी के पास पत्ते का एक छोटे धेर लगा हुआ था व्यवहार आम तवर पर सामाने लग रहा था लेकिन जानवर सामाने से कम सक्रिय था और सुबा का अधिकांच समय छाया में लेटा रहा चारा और पुरक आहान उपलब थे और निर्धारित आहार भी दिया गया था हाला कि मास की अपुर्थी थोड़ी देर से हुई अतिरिक्त नोट आने वाली ठंडी रातों के लिए अतिरिक्ती पुवाल के बिस्तर का अनुरोध किया गया है आरके शर्मा द्वारा हस्ताक्षरित स्वस्त्या निगरानी में तापमान और स्वासन सामान्य सीमा के भीतर पाया गया और छोटके लिए कोई निशान नहीं थे बहा पिछले पैर पर हलकी खरोच देग गई जो संभावत खुरदूरे खेल के सं� में सुबा 3.5 किलोग्राम भैंस का मांस और शाम के 2 किलोग्राम चिकन परोसने का संकेद दिया गया था और सारा चारा बिना किसी देरी के खाया गया था दवा दवा स्टाक रजिस्टर में सुबा की खुरा के बाद विटमिन सल्पिमेंट की बारा शीरित या शेप पाई गई जो पिछले दिन की 14 शीशियों से कम थी बड़े के पास पास दैनिक वन्य जीव निगरिन में चारागा के पास दो जंगल मोर और जुर्प समा बड़ा के पास ताजा लंगूर के निचान देखा गई
+
+Structured Data:
+---------------
+Date Or Day: 2025-09-07
+Animal Observed On Time: False
+Clean Drinking Water Provided: True
+Enclosure Cleaned Properly: False
+Normal Behaviour Status: False
+Normal Behaviour Details: Animal was less active than usual and spent most of the morning lying in the shade.
+Feed And Supplements Available: True
+Feed Given As Prescribed: True
+Other Animal Requirements: An additional straw bed has been requested for the upcoming cold nights.
+Incharge Signature: RK Sharma
+Daily Animal Health Monitoring: Temperature and respiration were found within normal limits, and there were no signs of injury, a slight scratch was seen on the hind leg, possibly from rough play.
+Carnivorous Animal Feeding Chart: 3.5 kg buffalo meat was indicated to be served in the morning and 2 kg chicken in the evening, and all feed was eaten without any delay.
+Medicine Stock Register: In the medicine stock register, 12 vials/bottles of vitamin supplement were found remaining after the morning dose, which is less than the 14 vials from the previous day.
+Daily Wildlife Monitoring: In daily wildlife monitoring near the enclosure, two jungle peacocks were seen near the pasture, and fresh langur tracks were seen near the enclosure.

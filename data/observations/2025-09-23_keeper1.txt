@@ -1,0 +1,26 @@
+Zoo Observation Report
+========================
+Date: 2025-09-23
+Zoo Keeper: keeper1
+Timestamp: 2025-09-23 23:21:15
+
+Raw Observation:
+----------------
+Error in audio transcription: ('Connection aborted.', TimeoutError('The write operation timed out'))
+
+Structured Data:
+---------------
+Date Or Day: 2025-09-23
+Animal Observed On Time: False
+Clean Drinking Water Provided: True
+Enclosure Cleaned Properly: False
+Normal Behaviour Status: False
+Normal Behaviour Details: Animal was less active than usual in the evening and spent most of the morning lying in the shade.
+Feed And Supplements Available: True
+Feed Given As Prescribed: True
+Other Animal Requirements: Additional bedding requested for upcoming cold nights.
+Incharge Signature: R. Sharma
+Daily Animal Health Monitoring: Body temperature and health were found within normal limits, with no signs of injuries. Slight scratching was observed yesterday afternoon, which seemed to be due to self-grooming or playing.
+Carnivorous Animal Feeding Chart: The carnivorous animal feeding chart indicated 3.5 kg of buffalo meat in the morning and 2 kg of chicken in the evening. All feed was consumed without delay.
+Medicine Stock Register: The medicine stock register showed 12 vitamin doses were given in the morning and after night, which is less than the 14 doses from the previous day.
+Daily Wildlife Monitoring: Daily wildlife monitoring in the surrounding area observed: one village, four cows near a village, two jungle peacocks, and signs of a langur near the boundary.

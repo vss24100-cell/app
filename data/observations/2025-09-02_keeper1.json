@@ -1,0 +1,23 @@
+{
+  "date": "2025-09-02",
+  "username": "keeper1",
+  "timestamp": "2025-09-20T15:25:36.322054",
+  "raw_observation": "Error in audio transcription",
+  "structured_data": {
+    "date_or_day": "2025-09-02",
+    "animal_observed_on_time": true,
+    "clean_drinking_water_provided": true,
+    "enclosure_cleaned_properly": true,
+    "normal_behaviour_status": true,
+    "normal_behaviour_details": null,
+    "feed_and_supplements_available": true,
+    "feed_given_as_prescribed": true,
+    "other_animal_requirements": "Error in audio transcription",
+    "incharge_signature": "Zoo Keeper",
+    "daily_animal_health_monitoring": "Observation recorded on 2025-09-02: Error in audio transcription",
+    "carnivorous_animal_feeding_chart": "Standard feeding schedule followed",
+    "medicine_stock_register": "Stock levels adequate",
+    "daily_wildlife_monitoring": "Wildlife monitoring completed on 2025-09-02"
+  },
+  "filename": "2025-09-02_keeper1.txt"
+}

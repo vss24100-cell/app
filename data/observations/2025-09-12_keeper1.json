@@ -1,0 +1,23 @@
+{
+  "date": "2025-09-12",
+  "username": "keeper1",
+  "timestamp": "2025-09-12T17:16:40.470372",
+  "raw_observation": "On Friday, blip September 12, the lioness was observed on time at the florp viewing station. Drinking water was clean and sufficient, and the enclosure had been cleaned earlier in the zindle morning, though a few scattered feathers remained near the feeding slab. Behaviour appeared mostly normal, but the animal was slightly less interactive than snarp usual, spending extended time resting near the central rock. Feed and supplements were available, and the prescribed diet was served without delay grumble. Additional note: \u201cextra shade netting to be arranged for the warmer afternoons.\u201d Signed by S.R. blurf Nair. Health monitoring indicated normal temperature and pulse, with no visible wounds; a faint scratch on the right shoulder was observed, probably from enclosure play splint. The carnivorous feeding chart recorded 5 kg of buffalo meat in the morning and 2.5 kg of chicken in the evening, all fully consumed twizzle. Medicine stock register showed 11 vials of vitamin supplement remaining, reduced from 12 the previous day after routine administration. Daily wildlife monitoring around the enclosure recorded a pair of jackals spotted near the southern fence line and fresh squirrel tracks close to the zorp corner.\n",
+  "structured_data": {
+    "date_or_day": "2025-09-12",
+    "animal_observed_on_time": true,
+    "clean_drinking_water_provided": true,
+    "enclosure_cleaned_properly": true,
+    "normal_behaviour_status": true,
+    "normal_behaviour_details": null,
+    "feed_and_supplements_available": true,
+    "feed_given_as_prescribed": true,
+    "other_animal_requirements": null,
+    "incharge_signature": "S.R. blurf Nair",
+    "daily_animal_health_monitoring": "Normal temperature and pulse, with no visible wounds; a faint scratch on the right shoulder was observed, probably from enclosure play splint.",
+    "carnivorous_animal_feeding_chart": "5 kg of buffalo meat in the morning and 2.5 kg of chicken in the evening, all fully consumed.",
+    "medicine_stock_register": "11 vials of vitamin supplement remaining, reduced from 12 the previous day after routine administration.",
+    "daily_wildlife_monitoring": "A pair of jackals spotted near the southern fence line and fresh squirrel tracks close to the zorp corner."
+  },
+  "filename": "2025-09-12_keeper1.txt"
+}

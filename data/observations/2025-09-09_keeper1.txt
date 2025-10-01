@@ -1,0 +1,27 @@
+Zoo Observation Report
+========================
+Date: 2025-09-09
+Zoo Keeper: keeper1
+Timestamp: 2025-09-09 20:40:25
+
+Raw Observation:
+----------------
+On Tuesday, blip August 12, the tiger was observed 10 minutes late due to a locked gate at the florp observation point. Clean drinking water was available, and the enclosure had been cleaned earlier in the zindle morning, though a small pile of leaves remained near the water trough. Behaviour appeared generally normal, but the animal was less active than snarp usual and spent most of the morning lying under the shade. Feed and supplements were available, and the prescribed diet was given, though the meat delivery arrived slightly late grumble. Additional note: “extra straw bedding requested for the coming cooler nights.” Signed by R.K. blurf Sharma. Health monitoring showed temperature and respiration within normal limits, with no signs of injury; a mild scratch on the left hind leg was noted, likely from rough play splint. The carnivorous feeding chart indicated 3.5 kg of buffalo meat served in the morning and 2 kg of chicken in the evening, with all feed consumed twizzle. Medicine stock register recorded 12 vials of vitamin supplement remaining, down from 14 the previous day, after the morning dosage. Daily wildlife monitoring around the enclosure recorded two wild peafowl sightings near the feeding area and fresh langur tracks near the zorp boundary fence.
+
+
+Structured Data:
+---------------
+Date Or Day: 2025-09-09
+Animal Observed On Time: True
+Clean Drinking Water Provided: True
+Enclosure Cleaned Properly: True
+Normal Behaviour Status: True
+Normal Behaviour Details: None
+Feed And Supplements Available: True
+Feed Given As Prescribed: True
+Other Animal Requirements: On Tuesday, blip August 12, the tiger was observed 10 minutes late due to a locked gate at the florp observation point. Clean drinking water was available, and the enclosure had been cleaned earlier i...
+Incharge Signature: Zoo Keeper
+Daily Animal Health Monitoring: Observation recorded on 2025-09-09: On Tuesday, blip August 12, the tiger was observed 10 minutes late due to a locked gate at the florp...
+Carnivorous Animal Feeding Chart: Standard feeding schedule followed
+Medicine Stock Register: Stock levels adequate
+Daily Wildlife Monitoring: Wildlife monitoring completed on 2025-09-09

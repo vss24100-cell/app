@@ -1,0 +1,23 @@
+{
+  "date": "2025-09-23",
+  "username": "keeper1",
+  "timestamp": "2025-09-23T23:21:15.077177",
+  "raw_observation": "Error in audio transcription: ('Connection aborted.', TimeoutError('The write operation timed out'))",
+  "structured_data": {
+    "date_or_day": "2025-09-23",
+    "animal_observed_on_time": false,
+    "clean_drinking_water_provided": true,
+    "enclosure_cleaned_properly": false,
+    "normal_behaviour_status": false,
+    "normal_behaviour_details": "Animal was less active than usual in the evening and spent most of the morning lying in the shade.",
+    "feed_and_supplements_available": true,
+    "feed_given_as_prescribed": true,
+    "other_animal_requirements": "Additional bedding requested for upcoming cold nights.",
+    "incharge_signature": "R. Sharma",
+    "daily_animal_health_monitoring": "Body temperature and health were found within normal limits, with no signs of injuries. Slight scratching was observed yesterday afternoon, which seemed to be due to self-grooming or playing.",
+    "carnivorous_animal_feeding_chart": "The carnivorous animal feeding chart indicated 3.5 kg of buffalo meat in the morning and 2 kg of chicken in the evening. All feed was consumed without delay.",
+    "medicine_stock_register": "The medicine stock register showed 12 vitamin doses were given in the morning and after night, which is less than the 14 doses from the previous day.",
+    "daily_wildlife_monitoring": "Daily wildlife monitoring in the surrounding area observed: one village, four cows near a village, two jungle peacocks, and signs of a langur near the boundary."
+  },
+  "filename": "2025-09-23_keeper1.txt"
+}

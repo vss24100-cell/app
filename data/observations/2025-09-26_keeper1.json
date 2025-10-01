@@ -1,0 +1,23 @@
+{
+  "date": "2025-09-26",
+  "username": "keeper1",
+  "timestamp": "2025-09-27T23:37:06.057305",
+  "raw_observation": "Error: 400 Client Error: Bad Request for url: https://api.deepgram.com/v1/listen?language=hi&translate=en",
+  "structured_data": {
+    "date_or_day": "2025-09-26",
+    "animal_observed_on_time": false,
+    "clean_drinking_water_provided": false,
+    "enclosure_cleaned_properly": false,
+    "normal_behaviour_status": false,
+    "normal_behaviour_details": "Error: 400 Client Error: Bad Request for url: https://api.deepgram.com/v1/listen?language=hi&translate=en",
+    "feed_and_supplements_available": false,
+    "feed_given_as_prescribed": false,
+    "other_animal_requirements": null,
+    "incharge_signature": "Zoo Keeper",
+    "daily_animal_health_monitoring": "Observation failed on 2025-09-26: Error: 400 Client Error: Bad Request for url: https://api.deepgram.com/v1/listen?language=hi&translate=en...",
+    "carnivorous_animal_feeding_chart": "Not available",
+    "medicine_stock_register": "Not available",
+    "daily_wildlife_monitoring": "Monitoring failed on 2025-09-26"
+  },
+  "filename": "2025-09-26_keeper1.txt"
+}

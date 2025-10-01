@@ -1,0 +1,26 @@
+Zoo Observation Report
+========================
+Date: 2025-09-27
+Zoo Keeper: keeper1
+Timestamp: 2025-09-27 23:28:59
+
+Raw Observation:
+----------------
+Error in audio transcription: ('Connection aborted.', TimeoutError('The write operation timed out'))
+
+Structured Data:
+---------------
+Date Or Day: 2025-09-27
+Animal Observed On Time: False
+Clean Drinking Water Provided: False
+Enclosure Cleaned Properly: False
+Normal Behaviour Status: False
+Normal Behaviour Details: मंगलवार यानी बारह अगस्त को भाग अवलोकन केंद्र की gate बंद होने के कारण दस minute दिए से देखा गया तीन पीने का साफ पानी उपलब्ध था और बड़ी की सुबह पहले ही सफाई कर दी गई थी हालांकि पानी की अवधि के pass प का एक छोटे ढेर लगा हुआ था त्योहार आमतौर पर सामान्य लग रहा था लेकिन जानवरों शाम सामान्य से कम सक्रिय था और सुबह का अधिकांश समय छाया में later चार चार चारा और पुर उपलब्ध थे और निर्धारित आहार हार दिया गया था हालांकि मांस की आप आपूर्ति थी थोड़ी देर से हुई लौट आने वाली ठंडी रातों के लिए अतिरिक्त के बिस्तर का अनुरोध किया गया है r की शर्मा द्वारा हस्ताक्षर शरीर स्वस्थ निगरानी में तापमान और स्वास्थ्य सामान्य सीमा के भीतर पाया गया और छोड़ छूट के लिए कोई निशान नहीं थे बाहर पिछले दोपहर पर हल्की घर खर्च देख गई जो संवाद खुद खुद खेल के संदेश से लगी हुई मांस हारी मांस चाट सुबह तीन five kilogram भैंस का मांस और शाम के दो kilogram chicken का संगीत संकेत दिया गया था और सारा चारा बिना किसी देरी के खाया गया था दवा staff register में सुबह की और रात के बाद vitamin की बारह या shape पाई गई जो पिछले दिन की चौदह शिशु से कम थी बड़े आस pass दैनिक वन्य जीवन one नगर में चारा चार गांव कि pass दो जंगल मोर और बढ़ा के pass का लंगर की निशान देखा गई
+Feed And Supplements Available: False
+Feed Given As Prescribed: False
+Other Animal Requirements: None
+Incharge Signature: Zoo Keeper
+Daily Animal Health Monitoring: Observation recorded on 2025-09-27: मंगलवार यानी बारह अगस्त को भाग अवलोकन केंद्र की gate बंद होने के कारण दस minute दिए से देखा गया तीन ...
+Carnivorous Animal Feeding Chart: Standard feeding schedule followed
+Medicine Stock Register: Stock levels adequate
+Daily Wildlife Monitoring: Wildlife monitoring completed on 2025-09-27

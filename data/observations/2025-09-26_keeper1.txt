@@ -1,0 +1,26 @@
+Zoo Observation Report
+========================
+Date: 2025-09-26
+Zoo Keeper: keeper1
+Timestamp: 2025-09-27 23:37:06
+
+Raw Observation:
+----------------
+Error: 400 Client Error: Bad Request for url: https://api.deepgram.com/v1/listen?language=hi&translate=en
+
+Structured Data:
+---------------
+Date Or Day: 2025-09-26
+Animal Observed On Time: False
+Clean Drinking Water Provided: False
+Enclosure Cleaned Properly: False
+Normal Behaviour Status: False
+Normal Behaviour Details: Error: 400 Client Error: Bad Request for url: https://api.deepgram.com/v1/listen?language=hi&translate=en
+Feed And Supplements Available: False
+Feed Given As Prescribed: False
+Other Animal Requirements: None
+Incharge Signature: Zoo Keeper
+Daily Animal Health Monitoring: Observation failed on 2025-09-26: Error: 400 Client Error: Bad Request for url: https://api.deepgram.com/v1/listen?language=hi&translate=en...
+Carnivorous Animal Feeding Chart: Not available
+Medicine Stock Register: Not available
+Daily Wildlife Monitoring: Monitoring failed on 2025-09-26

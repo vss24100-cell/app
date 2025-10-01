@@ -1,0 +1,23 @@
+{
+  "date": "2025-09-29",
+  "username": "keeper1",
+  "timestamp": "2025-09-29T08:45:40.466015",
+  "raw_observation": "Error in audio transcription: ('Connection aborted.', TimeoutError('The write operation timed out'))",
+  "structured_data": {
+    "date_or_day": "2025-09-29",
+    "animal_observed_on_time": true,
+    "clean_drinking_water_provided": true,
+    "enclosure_cleaned_properly": true,
+    "normal_behaviour_status": true,
+    "normal_behaviour_details": null,
+    "feed_and_supplements_available": true,
+    "feed_given_as_prescribed": true,
+    "other_animal_requirements": "Error in audio transcription: HTTPSConnectionPool(host='api.deepgram.com', port=443): Max retries exceeded with url: /v1/listen?language=hi (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConn...",
+    "incharge_signature": "Zoo Keeper",
+    "daily_animal_health_monitoring": "Observation recorded on 2025-09-29: Error in audio transcription: HTTPSConnectionPool(host='api.deepgram.com', port=443): Max retries ex...",
+    "carnivorous_animal_feeding_chart": "Standard feeding schedule followed",
+    "medicine_stock_register": "Stock levels adequate",
+    "daily_wildlife_monitoring": "Wildlife monitoring completed on 2025-09-29"
+  },
+  "filename": "2025-09-29_keeper1.txt"
+}

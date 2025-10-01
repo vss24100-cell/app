@@ -1,0 +1,26 @@
+Zoo Observation Report
+========================
+Date: 2025-09-19
+Zoo Keeper: keeper1
+Timestamp: 2025-09-20 11:13:54
+
+Raw Observation:
+----------------
+Audio transcription unavailable - Whisper pipeline not initialized
+
+Structured Data:
+---------------
+Date Or Day: 2025-09-19
+Animal Observed On Time: True
+Clean Drinking Water Provided: True
+Enclosure Cleaned Properly: True
+Normal Behaviour Status: True
+Normal Behaviour Details: None
+Feed And Supplements Available: True
+Feed Given As Prescribed: True
+Other Animal Requirements: Audio transcription unavailable - Whisper pipeline not initialized
+Incharge Signature: Zoo Keeper
+Daily Animal Health Monitoring: Observation recorded on 2025-09-19: Audio transcription unavailable - Whisper pipeline not initialized
+Carnivorous Animal Feeding Chart: Standard feeding schedule followed
+Medicine Stock Register: Stock levels adequate
+Daily Wildlife Monitoring: Wildlife monitoring completed on 2025-09-19

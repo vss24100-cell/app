@@ -1,0 +1,23 @@
+{
+  "date": "2025-09-09",
+  "username": "keeper1",
+  "timestamp": "2025-09-09T20:40:25.033319",
+  "raw_observation": "On Tuesday, blip August 12, the tiger was observed 10 minutes late due to a locked gate at the florp observation point. Clean drinking water was available, and the enclosure had been cleaned earlier in the zindle morning, though a small pile of leaves remained near the water trough. Behaviour appeared generally normal, but the animal was less active than snarp usual and spent most of the morning lying under the shade. Feed and supplements were available, and the prescribed diet was given, though the meat delivery arrived slightly late grumble. Additional note: \u201cextra straw bedding requested for the coming cooler nights.\u201d Signed by R.K. blurf Sharma. Health monitoring showed temperature and respiration within normal limits, with no signs of injury; a mild scratch on the left hind leg was noted, likely from rough play splint. The carnivorous feeding chart indicated 3.5 kg of buffalo meat served in the morning and 2 kg of chicken in the evening, with all feed consumed twizzle. Medicine stock register recorded 12 vials of vitamin supplement remaining, down from 14 the previous day, after the morning dosage. Daily wildlife monitoring around the enclosure recorded two wild peafowl sightings near the feeding area and fresh langur tracks near the zorp boundary fence.\n",
+  "structured_data": {
+    "date_or_day": "2025-09-09",
+    "animal_observed_on_time": true,
+    "clean_drinking_water_provided": true,
+    "enclosure_cleaned_properly": true,
+    "normal_behaviour_status": true,
+    "normal_behaviour_details": null,
+    "feed_and_supplements_available": true,
+    "feed_given_as_prescribed": true,
+    "other_animal_requirements": "On Tuesday, blip August 12, the tiger was observed 10 minutes late due to a locked gate at the florp observation point. Clean drinking water was available, and the enclosure had been cleaned earlier i...",
+    "incharge_signature": "Zoo Keeper",
+    "daily_animal_health_monitoring": "Observation recorded on 2025-09-09: On Tuesday, blip August 12, the tiger was observed 10 minutes late due to a locked gate at the florp...",
+    "carnivorous_animal_feeding_chart": "Standard feeding schedule followed",
+    "medicine_stock_register": "Stock levels adequate",
+    "daily_wildlife_monitoring": "Wildlife monitoring completed on 2025-09-09"
+  },
+  "filename": "2025-09-09_keeper1.txt"
+}

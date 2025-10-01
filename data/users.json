@@ -1,0 +1,11 @@
+{
+  "zookeeper": {
+    "keeper1": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f"
+  },
+  "doctor": {
+    "doctor1": "b573179ece8c943543550573a9e61f720f48726fddd5b9416cfdc9f351b5972a"
+  },
+  "admin": {
+    "admin1": "435fc140b59fca670b54716967ac7db477ebfe39f136c73b6e38a573d76face0"
+  }
+}
