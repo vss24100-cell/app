@@ -41,3 +41,4 @@ pyaudio
 requests
 
 pydantic
+google-generativeai
