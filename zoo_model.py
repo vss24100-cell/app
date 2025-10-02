@@ -33,10 +33,11 @@ class ZooAIModel:
     def __init__(self):
         """Initialize Gemini LLM and Deepgram API."""
         # Gemini LLM - Load from environment variable
-        gem_key = os.getenv("GOOGLE_API_KEY", "")
+        gem_key =os.getenv("GOOGLE_API_KEY", "")
         if gem_key:
             genai.configure(api_key=gem_key)
-            self.llm = genai.GenerativeModel("gemini-1.5-flash")
+            self.llm = genai.GenerativeModel("gemini-2.5-flash")
+
         else:
             self.llm = None
             print("ℹ️  GOOGLE_API_KEY not set. AI processing will use fallback data.")
