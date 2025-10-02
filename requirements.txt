@@ -48,7 +48,7 @@ huggingface-hub
 langchain-google-genai
 langchain-openai
 numpy
-pyaudio
+sounddevice
 requests
 scikit-learn
 sounddevice
