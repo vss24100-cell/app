@@ -34,10 +34,10 @@ streamlit-webrtc
 # Audio Handling
 sounddevice
 soundfile
-pyaudio
+
 # Core ML frameworks
 streamlit
-pyaudio
+
 requests
 
 pydantic
