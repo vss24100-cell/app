@@ -3,21 +3,14 @@ from datetime import datetime, date
 from zoo_model import zoo_model
 from data_manager import data_manager
 
-# Try to import audio recorder with multiple fallbacks
+# Import audio recorder (no ffmpeg required, works in all deployments)
 try:
-    from audiorecorder import audiorecorder
+    from audio_recorder_streamlit import audio_recorder
     AUDIO_AVAILABLE = True
-    AUDIO_METHOD = "audiorecorder"
 except ImportError:
-    try:
-        import streamlit_webrtc
-        AUDIO_AVAILABLE = True
-        AUDIO_METHOD = "webrtc"
-    except ImportError:
-        AUDIO_AVAILABLE = False
-        AUDIO_METHOD = None
-        def audiorecorder(*args, **kwargs):
-            return None
+    AUDIO_AVAILABLE = False
+    def audio_recorder(*args, **kwargs):
+        return None
 
 def show_zookeeper_interface():
     """Display zoo keeper interface with calendar and observation input"""
@@ -107,41 +100,54 @@ Example: "Morning rounds at 8 AM. Lions were active and alert. Fed at scheduled 
         
         else:  # Hindi Voice Input
             st.markdown("**🎤 Record your observations in Hindi:**")
-            st.info("💡 Click record, speak your observations, then click 'Process Observation' to auto-fill the form")
             
-            if AUDIO_METHOD == "audiorecorder":
-                # Audio recorder
-                audio_data = audiorecorder(
-                    text="Click to record",
-                    recording_color="#e74c3c",
-                    neutral_color="#34495e",
-                    icon_name="microphone",
-                    icon_size="2x",
-                )
-            elif AUDIO_METHOD == "webrtc":
-                # Alternative audio file upload (simplified)
-                audio_data = st.file_uploader("Upload audio file (.wav, .mp3, .m4a)", type=['wav', 'mp3', 'm4a'])
-            else:
-                st.error("Audio recording not available")
-                audio_data = None
+            # Audio input method selection
+            audio_input_method = st.radio(
+                "Choose audio input method:",
+                ["🎙️ Live Recording", "📁 Upload Audio File"],
+                horizontal=True
+            )
             
-            # Show audio playback if available
-            if AUDIO_METHOD == "audiorecorder" and audio_data and len(audio_data) > 0:
-                st.success("✅ Audio recorded successfully! Click 'Process Observation' to auto-fill the form.")
-                try:
-                    st.audio(audio_data.export().read())
-                except Exception as e:
-                    st.error(f"Audio playback error: {e}")
+            uploaded_audio = None
+            recorded_audio = None
             
-            elif AUDIO_METHOD == "webrtc" and audio_data is not None:
-                st.success("✅ Audio file uploaded successfully! Click 'Process Observation' to auto-fill the form.")
-                st.audio(audio_data.read())
-            
-            elif AUDIO_AVAILABLE:
-                if AUDIO_METHOD == "audiorecorder":
-                    st.info("🎤 Please record your observations in Hindi by clicking the microphone button above.")
+            if audio_input_method == "🎙️ Live Recording":
+                st.info("💡 Click the microphone icon, speak your observations, then stop recording")
+                
+                if AUDIO_AVAILABLE:
+                    # Audio recorder (returns audio bytes directly, no ffmpeg needed)
+                    # Use a unique key to allow multiple recordings
+                    recorded_audio = audio_recorder(
+                        text="",
+                        recording_color="#e74c3c",
+                        neutral_color="#34495e",
+                        icon_name="microphone",
+                        icon_size="2x",
+                        key="audio_recorder"
+                    )
+                    audio_data = recorded_audio
                 else:
-                    st.info("🎤 Please upload an audio file with your Hindi observations.")
+                    st.error("Live recording not available. Please use file upload option.")
+                    audio_data = None
+                
+                # Show audio playback if available
+                if recorded_audio is not None:
+                    st.success("✅ Audio recorded successfully! Click 'Process Observation' to auto-fill the form.")
+                    st.audio(recorded_audio, format='audio/wav')
+                        
+            else:  # Upload Audio File
+                st.info("💡 Upload an audio file with your Hindi observations, then click 'Process Observation'")
+                uploaded_audio = st.file_uploader(
+                    "Choose an audio file (.wav, .mp3, .m4a, .ogg)", 
+                    type=['wav', 'mp3', 'm4a', 'ogg'],
+                    help="Upload a pre-recorded audio file with your observations in Hindi"
+                )
+                audio_data = uploaded_audio
+                
+                # Show audio playback if available
+                if uploaded_audio is not None:
+                    st.success("✅ Audio file uploaded successfully! Click 'Process Observation' to auto-fill the form.")
+                    st.audio(uploaded_audio)
         
         # Processing and submission
         col3, col4 = st.columns(2)
@@ -151,12 +157,8 @@ Example: "Morning rounds at 8 AM. Lions were active and alert. Fed at scheduled 
         if input_method == "📝 Text Input":
             can_process = observation_text.strip()
         else:  # Hindi Voice Input
-            if AUDIO_METHOD == "audiorecorder":
-                can_process = audio_data and len(audio_data) > 0
-            elif AUDIO_METHOD == "webrtc":
-                can_process = audio_data is not None
-            else:
-                can_process = False
+            # audio_data is either bytes (from recorder) or UploadedFile (from uploader)
+            can_process = audio_data is not None
         
         with col3:
             process_button = st.button(
@@ -187,9 +189,12 @@ Example: "Morning rounds at 8 AM. Lions were active and alert. Fed at scheduled 
                     else:
                         # Process audio observation (transcribe + structure)
                         try:
-                            if AUDIO_METHOD == "audiorecorder":
-                                audio_bytes = audio_data.export().read()
-                            elif AUDIO_METHOD == "webrtc":
+                            # Handle both recorded and uploaded audio
+                            if isinstance(audio_data, bytes):
+                                # Recorded audio (bytes from audio_recorder)
+                                audio_bytes = audio_data
+                            else:
+                                # Uploaded audio file
                                 audio_data.seek(0)  # Reset file pointer
                                 audio_bytes = audio_data.read()
                             
