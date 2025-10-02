@@ -3,21 +3,8 @@ from datetime import datetime, date
 from zoo_model import zoo_model
 from data_manager import data_manager
 
-# Try to import audio recorder with multiple fallbacks
-try:
-    from audiorecorder import audiorecorder
-    AUDIO_AVAILABLE = True
-    AUDIO_METHOD = "audiorecorder"
-except ImportError:
-    try:
-        import streamlit_webrtc
-        AUDIO_AVAILABLE = True
-        AUDIO_METHOD = "webrtc"
-    except ImportError:
-        AUDIO_AVAILABLE = False
-        AUDIO_METHOD = None
-        def audiorecorder(*args, **kwargs):
-            return None
+# Audio input is now natively available in Streamlit
+AUDIO_AVAILABLE = True
 
 def show_zookeeper_interface():
     """Display zoo keeper interface with calendar and observation input"""
@@ -107,45 +94,16 @@ Example: "Morning rounds at 8 AM. Lions were active and alert. Fed at scheduled 
         
         else:  # Hindi Voice Input
             st.markdown("**🎤 Record your observations in Hindi:**")
-            st.info("💡 Click to start recording, speak your observations (up to 2 minutes), then click stop. After that, click 'Process Observation' to auto-fill the form")
+            st.info("💡 Click the microphone button below to record your observations in Hindi, then click 'Process Observation' to auto-fill the form")
             
-            if AUDIO_METHOD == "audiorecorder":
-                # Audio recorder
-                audio_data = audiorecorder(
-                    start_prompt="🎤 Start Recording",
-                    stop_prompt="⏹️ Stop Recording",
-                    pause_prompt="",
-                    key="audio_recorder"
-                )
-            elif AUDIO_METHOD == "webrtc":
-                # Alternative audio file upload (simplified)
-                audio_data = st.file_uploader("Upload audio file (.wav, .mp3, .m4a)", type=['wav', 'mp3', 'm4a'])
+            # Use native Streamlit audio input
+            audio_data = st.audio_input("Record your observations in Hindi")
+            
+            # Show success message if audio is recorded
+            if audio_data is not None:
+                st.success("✅ Audio recorded successfully! Click 'Process Observation' to auto-fill the form.")
             else:
-                st.error("Audio recording not available")
-                audio_data = None
-            
-            # Show audio playback if available
-            if AUDIO_METHOD == "audiorecorder" and audio_data and len(audio_data) > 0:
-                # Check duration
-                duration = audio_data.duration_seconds
-                if duration > 120:
-                    st.warning(f"⚠️ Recording is {duration:.1f} seconds long. Please keep recordings under 2 minutes for best results.")
-                else:
-                    st.success(f"✅ Audio recorded successfully ({duration:.1f} seconds)! Click 'Process Observation' to auto-fill the form.")
-                try:
-                    st.audio(audio_data.export().read())
-                except Exception as e:
-                    st.error(f"Audio playback error: {e}")
-            
-            elif AUDIO_METHOD == "webrtc" and audio_data is not None:
-                st.success("✅ Audio file uploaded successfully! Click 'Process Observation' to auto-fill the form.")
-                st.audio(audio_data.read())
-            
-            elif AUDIO_AVAILABLE:
-                if AUDIO_METHOD == "audiorecorder":
-                    st.info("🎤 Please record your observations in Hindi by clicking the microphone button above.")
-                else:
-                    st.info("🎤 Please upload an audio file with your Hindi observations.")
+                st.info("🎤 Please record your observations in Hindi using the microphone button above.")
         
         # Processing and submission
         col3, col4 = st.columns(2)
@@ -155,12 +113,7 @@ Example: "Morning rounds at 8 AM. Lions were active and alert. Fed at scheduled 
         if input_method == "📝 Text Input":
             can_process = observation_text.strip()
         else:  # Hindi Voice Input
-            if AUDIO_METHOD == "audiorecorder":
-                can_process = audio_data and len(audio_data) > 0
-            elif AUDIO_METHOD == "webrtc":
-                can_process = audio_data is not None
-            else:
-                can_process = False
+            can_process = audio_data is not None
         
         with col3:
             process_button = st.button(
@@ -191,16 +144,17 @@ Example: "Morning rounds at 8 AM. Lions were active and alert. Fed at scheduled 
                     else:
                         # Process audio observation (transcribe + structure)
                         try:
-                            if AUDIO_METHOD == "audiorecorder":
-                                audio_bytes = audio_data.export().read()
-                            elif AUDIO_METHOD == "webrtc":
-                                audio_data.seek(0)  # Reset file pointer
+                            # Read audio bytes from st.audio_input
+                            if audio_data is not None:
                                 audio_bytes = audio_data.read()
-                            
-                            structured_data = zoo_model.process_audio_observation(audio_bytes, obs_date, language="hi")
-                            
-                            # Get the transcribed text for storage
-                            final_observation_text = zoo_model.transcribe_audio(audio_bytes, language="hi")
+                                
+                                structured_data = zoo_model.process_audio_observation(audio_bytes, obs_date, language="hi")
+                                
+                                # Get the transcribed text for storage
+                                final_observation_text = zoo_model.transcribe_audio(audio_bytes, language="hi")
+                            else:
+                                final_observation_text = "No audio data"
+                                structured_data = zoo_model._create_fallback_data(final_observation_text, obs_date)
                         except Exception as e:
                             st.error(f"Audio processing error: {e}")
                             final_observation_text = "Audio processing failed"
