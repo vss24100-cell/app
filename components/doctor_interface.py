@@ -271,7 +271,7 @@ def show_search_interface():
                 raw_obs = obs.get("raw_observation", "")
                 
                 with st.expander(f"📅 {obs_date} - {keeper_name}"):
-                    st.text_area("Observation:", value=raw_obs, height=100, disabled=True)
+                    st.text_area("Observation:", value=raw_obs, height=100, disabled=True, key=f"search_obs_{obs_date}_{keeper_name}")
                     
                     # Show why this matched
                     if search_text and search_text.lower() in raw_obs.lower():
