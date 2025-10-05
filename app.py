@@ -152,8 +152,13 @@ st.markdown("""
     
     /* Label styling */
     label {
-        color: #A5D6A7 !important;
+        color: #1e4d2b !important;
         font-weight: 600 !important;
+    }
+    
+    /* Paragraph and general text styling */
+    p, div, span {
+        color: #000000 !important;
     }
     
     /* Animal/Zoo themed decorative elements */
